@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps CI/CD Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>DevOps CI/CD Demo</h1>
+            <p>Automated deployment using GitHub Actions, Amazon S3 and CloudFront</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>CI/CD Pipeline Successfully Configured</h2>
+
+            <p>
+                This website is deployed through an automated CI/CD pipeline.
+                A code change pushed to GitHub triggers GitHub Actions,
+                which tests and deploys the application to Amazon S3.
+            </p>
+
+            <button id="deployButton">
+                Verify Deployment
+            </button>
+
+            <p id="status"></p>
+        </section>
+
+        <section class="pipeline">
+
+            <h2>Deployment Pipeline</h2>
+
+            <div class="pipeline-flow">
+
+                <div class="step">
+                    <strong>1</strong>
+                    <span>HTML / CSS / JS</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <strong>2</strong>
+                    <span>GitHub</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <strong>3</strong>
+                    <span>GitHub Actions</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <strong>4</strong>
+                    <span>Amazon S3</span>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <strong>5</strong>
+                    <span>CloudFront</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="info">
+
+            <div class="card">
+                <h3>Source</h3>
+                <p>GitHub Repository</p>
+            </div>
+
+            <div class="card">
+                <h3>Automation</h3>
+                <p>GitHub Actions</p>
+            </div>
+
+            <div class="card">
+                <h3>Storage</h3>
+                <p>Amazon S3</p>
+            </div>
+
+            <div class="card">
+                <h3>Delivery</h3>
+                <p>Amazon CloudFront</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>DevOps Fundamentals Practical Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
