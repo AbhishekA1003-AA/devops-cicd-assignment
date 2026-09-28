@@ -1,113 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevOps CI/CD Demo</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps CI/CD Assignment - Version 2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="header">
-        <div class="container">
-            <h1>DevOps CI/CD Demo</h1>
-            <p>Automated deployment using GitHub Actions, Amazon S3 and CloudFront</p>
+  <header class="hero">
+    <div class="container">
+      <p class="badge">AWS CI/CD PIPELINE</p>
+
+      <h1>DevOps CI/CD Deployment</h1>
+
+      <p class="subtitle">
+        Version 2 — Website successfully updated through the CI/CD pipeline
+      </p>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>Deployment Status: Successfully Updated</span>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <section class="card">
+      <h2>CI/CD Pipeline</h2>
+
+      <div class="pipeline">
+
+        <div class="pipeline-step">
+          <strong>GitHub</strong>
+          <span>Source Code</span>
         </div>
-    </header>
 
-    <main class="container">
+        <div class="arrow">→</div>
 
-        <section class="hero">
-            <h2>CI/CD Pipeline Successfully Configured</h2>
+        <div class="pipeline-step">
+          <strong>GitHub Actions</strong>
+          <span>Test & Build</span>
+        </div>
 
-            <p>
-                This website is deployed through an automated CI/CD pipeline.
-                A code change pushed to GitHub triggers GitHub Actions,
-                which tests and deploys the application to Amazon S3.
-            </p>
+        <div class="arrow">→</div>
 
-            <button id="deployButton">
-                Verify Deployment
-            </button>
+        <div class="pipeline-step">
+          <strong>AWS S3</strong>
+          <span>Deployment</span>
+        </div>
 
-            <p id="status"></p>
-        </section>
+        <div class="arrow">→</div>
 
-        <section class="pipeline">
+        <div class="pipeline-step">
+          <strong>CloudFront</strong>
+          <span>Delivery</span>
+        </div>
 
-            <h2>Deployment Pipeline</h2>
+      </div>
+    </section>
 
-            <div class="pipeline-flow">
 
-                <div class="step">
-                    <strong>1</strong>
-                    <span>HTML / CSS / JS</span>
-                </div>
+    <section class="card">
+      <h2>Deployment Information</h2>
 
-                <div class="arrow">→</div>
+      <div class="info-grid">
 
-                <div class="step">
-                    <strong>2</strong>
-                    <span>GitHub</span>
-                </div>
+        <div class="info-item">
+          <span>Source</span>
+          <strong>GitHub</strong>
+        </div>
 
-                <div class="arrow">→</div>
+        <div class="info-item">
+          <span>CI/CD</span>
+          <strong>GitHub Actions</strong>
+        </div>
 
-                <div class="step">
-                    <strong>3</strong>
-                    <span>GitHub Actions</span>
-                </div>
+        <div class="info-item">
+          <span>Storage</span>
+          <strong>AWS S3</strong>
+        </div>
 
-                <div class="arrow">→</div>
+        <div class="info-item">
+          <span>CDN</span>
+          <strong>Amazon CloudFront</strong>
+        </div>
 
-                <div class="step">
-                    <strong>4</strong>
-                    <span>Amazon S3</span>
-                </div>
+      </div>
+    </section>
 
-                <div class="arrow">→</div>
 
-                <div class="step">
-                    <strong>5</strong>
-                    <span>CloudFront</span>
-                </div>
+    <section class="card update-card">
+      <h2>Version 2 Update</h2>
 
-            </div>
+      <p>
+        This website has been updated and redeployed automatically after
+        changes were pushed to the <strong>main</strong> branch.
+      </p>
 
-        </section>
+      <p class="update-message">
+        ✓ CI/CD deployment completed successfully
+      </p>
 
-        <section class="info">
+      <button id="verifyButton">
+        Verify Deployment
+      </button>
 
-            <div class="card">
-                <h3>Source</h3>
-                <p>GitHub Repository</p>
-            </div>
+      <p id="verifyResult"></p>
+    </section>
 
-            <div class="card">
-                <h3>Automation</h3>
-                <p>GitHub Actions</p>
-            </div>
+  </main>
 
-            <div class="card">
-                <h3>Storage</h3>
-                <p>Amazon S3</p>
-            </div>
 
-            <div class="card">
-                <h3>Delivery</h3>
-                <p>Amazon CloudFront</p>
-            </div>
+  <footer>
+    <p>DevOps Fundamentals Assignment | Version 2</p>
+  </footer>
 
-        </section>
 
-    </main>
+  <script src="script.js"></script>
 
-    <footer>
-        <p>DevOps Fundamentals Practical Assignment</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

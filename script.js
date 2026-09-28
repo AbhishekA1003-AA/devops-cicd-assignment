@@ -1,6 +1,7 @@
-const deployButton = document.getElementById("deployButton");
-const status = document.getElementById("status");
+const verifyButton = document.getElementById("verifyButton");
+const verifyResult = document.getElementById("verifyResult");
 
-deployButton.addEventListener("click", () => {
-    status.textContent = "Deployment verified successfully!";
+verifyButton.addEventListener("click", () => {
+  verifyResult.textContent =
+    "✓ Version 2 is live and the deployment is working successfully.";
 });
