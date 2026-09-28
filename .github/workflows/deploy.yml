@@ -99,6 +99,21 @@ jobs:
             --exclude "*.md" \
             --delete
 
+      - name: Verify CloudFront distribution
+        run: |
+          echo "Checking CloudFront distributions..."
+
+          aws cloudfront list-distributions \
+            --region us-east-1 \
+            --query "DistributionList.Items[].{Id:Id,Domain:DomainName,Status:Status}" \
+            --output table
+
+          echo "Checking target distribution..."
+
+          aws cloudfront get-distribution \
+            --region us-east-1 \
+            --id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }}
+
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
